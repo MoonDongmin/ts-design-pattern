@@ -1,7 +1,7 @@
 import type {Duck}        from "@/01-strategy-pattern/duck.ts";
 import {MallardDuck}      from "@/01-strategy-pattern/mallard-duck.ts";
 import {ModelDuck}        from "@/01-strategy-pattern/model-duck.ts";
-import {FlyRocketPowered} from "@/01-strategy-pattern/fly-rocket-powered.ts";
+import {FlyRocketPowered} from "@/01-strategy-pattern/strategy/fly-rocket-powered.ts";
 
 function main() {
     const mallard: Duck = new MallardDuck();
@@ -10,7 +10,7 @@ function main() {
 
     const model: Duck = new ModelDuck();
     model.performFly();
-    model.flayBehavior = new FlyRocketPowered();
+    model.flyBehavior = new FlyRocketPowered();
     model.performFly();
 }
 
