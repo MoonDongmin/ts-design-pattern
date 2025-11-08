@@ -29,6 +29,11 @@ export class ChocolateBoiler {
     return this.uniqueInstance;
   }
 
+  public static createNew(): ChocolateBoiler {
+    return new ChocolateBoiler();
+  }
+
+
   public fill(): void {
     if (this.isEmpty()) {
       this.empty = false;
